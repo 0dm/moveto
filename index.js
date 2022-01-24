@@ -13,10 +13,10 @@ module.exports = class moveto extends Plugin {
   }
 
   handleCommand(args) {
-    if (args.length < 1)
+    if (args.length != 1)
       return;
     
-    selectVoiceChannel(args);
+    selectVoiceChannel(args[0]);
 
     return {        
         send: false,
